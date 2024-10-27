@@ -1,0 +1,36 @@
+/* 
+ * Sets a maximum width of 80rem 
+ * for content which reflects the 
+ * max width of websites content 
+ * on large screens 
+ */
+.sized-container {
+    width: min(80rem, 100% - 2em);
+    margin-inline: auto;
+}
+
+/* Usage suggestion, for avoding a nested <div> only for layout container */
+.my-container > * {
+    max-inline-size: min(80rem, 100% - 2em); /* fixes width size for headings, if necessary */
+    width: min(80rem, 100% - 2em);
+    margin-inline: auto;
+}
+
+/*
+ * Auto-grid for cards content.
+ * Sets as many columns of width between 25rem and 1fr according to the space.
+ * If 1fr < 25rem, 25rem is taken as the lower minimum, setting a min width size for columns
+ */
+.auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+
+/* 
+ * Sticky Header
+ */
+.sticky-header {
+    position: sticky;
+    top: 0;
+}

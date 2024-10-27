@@ -1,0 +1,16 @@
+/* 
+ * Sets a color gradient for text. 
+ * Use on headings, possibily inside spans 
+ * to color portions of text title
+*/
+.gradient-colored-text {
+    background-image: linear-gradient(
+      to bottom right,
+      #f32170,
+      #ff6b08,
+      #cf23cf,
+      #eedd44
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
